@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+  --orange:#ffa500;
+}
+body{
+  background-color: #9ea8aa;
+}
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none; border:none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+/* 
+*::selection{
+  background:var(--orange);
+  color:#fff; */
+
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #3346ac;
+}
+
+
+/* ..logo.. */
+
+.logo {
+    width: 140px;
+    border-radius: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* ------..heDER TEXT........ */
+
+.header-text {
+    margin-top: 20px;
+}
+
+.header-text span {
+    color: #ff004f;
+}
+
+/* ........deatils........
+ */
+ .deatils{
+  display: flex;
+  word-wrap: normal;
+  margin: 20px;
+  margin-bottom: 20px;
+  width: fit-content;
+  
+  background-image: linear-gradient(#232936, #452285,#12272b);
+  font-size: large;
+  color: yellow;
+
+
+ }
+
+/*------- gallery----- */
+/* start */
+#gallery-area{
+  background: linear-gradient(#00bcd4, #e91e63,#00bcd4);
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+
+
+/* --------------button---------- */
+
+#button-area{
+  background: linear-gradient(#232936, #7f78e7,#4db677);
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #8D60DE;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 2px;
+    left: 100px;
+    background: #272525;
+    border-radius: 5px;
+  }
+  
+  .button:hover {
+    background: #8D60DE;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 1.5px #D4C7EC,
+                0 0 22px #D4C7EC,
+                0 0 50px #D4C7EC,
+                0 0 10px #D4C7EC;
+  }
+  
+  .button span {
+    position: absolute;
+    display: block;
+  }
+  
+  .button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8D60DE);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #8D60DE);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #8D60DE);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #8D60DE);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+
+  /* end button */
+
+  /* small ------------------ */
+
+  nav.fa-bars,
+.fa-bars {
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+  .header-text {
+    margin-top: 100%;
+    font-size: 16px;
+}
+.header-text h1 {
+    font-size: 30px;
+}
+nav.fa-square-xmark .fa-bars {
+    display: block;
+    font-size: 25px;
+}
+nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+}
+nav ul li {
+    display: block;
+    margin: 25px;
+}
+nav ul .fa-square-xmark,
+.fa-bars {
+    position: absolute;
+    top: 25px;
+    cursor: pointer;
+}
+}
+
+/* ---------........  card group ....--------- */
+.cat1,
+.cat2,
+.cat3 {
+    padding: 15px 30px;
+    border: 15px;
+}
+
+.cat1 {
+    background-color: rgb(221, 62, 13);
+}
+
+.cat2 {
+    background-color: orchid;
+}
+
+.cat3 {
+    background-color: rgb(138, 23, 113);
+}
+
+.categories h1 {
+    color: white;
+    font-weight: 500;
+}
+.categories p{
+  background-image: linear-gradient(to right, rgb(243, 234, 234),rgb(255, 0, 242), cyan);
+  color: rgb(19, 1, 4);
+  font-family: fantasy;
+  font-size: 18px;
+}
+
+.categories img {
+    width: 100px;
+}
+
+#catagorise{
+  margin-top: 40px;
+  animation: zoom 3s linear infinite;
+}
+@keyframes zoom{
+  0%{
+    transform: scale(1.3);
+
+  }
+  15%{
+    transform: scale(1);
+
+  }
+  85%{
+    transform: scale(1);
+    
+  }
+  100%{
+    transform: scale(1);
+    
+  }
+  
+
+}
+
+/* product */
+.container {
+  margin-bottom: 100px;
+}
+
+.orange-bg {
+  background-color: #fceae8;
+  border-radius: 10px;
+}
+
+.carousel-item {
+  padding: 20px 40px;
+  width: 90%;
+  width: 60%;
+}
+
+.price {
+  color: #FF136F;
+}
+
+.buy-now {
+  background-image: linear-gradient( to bottom, #FF5898 0%, #FF136F 100%);
+  border-radius: 8PX;
+  margin-top: 10px;
+  color: #fff;
+  padding: 9px 25px;
+  border: none;
+  cursor: pointer;
+}
+h5{
+  background-color: #ce658d;
+  padding: 10px;
+  font-size: 16px;
+  width: fit-content;
+
+}
